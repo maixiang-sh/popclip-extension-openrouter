@@ -1,0 +1,14 @@
+# Environment variables
+.env
+.venv
+
+# Dependencies
+node_modules/
+
+# OS generated files
+.DS_Store
+
+# Build artifacts
+builds/
+*.popclipextz
+Config.json

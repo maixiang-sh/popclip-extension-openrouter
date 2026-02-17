@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "package": "bash package.sh",
+    "release-check": "bash scripts/release-check.sh"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@popclip/types": "^1.4892.0",
+    "typescript": "^5.9.3"
+  }
+}

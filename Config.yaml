@@ -1,0 +1,111 @@
+name:
+  en: OpenRouter Chat
+  zh-Hans: OpenRouter Chat
+  ja: OpenRouter Chat
+identifier: me.maixiang.popclip.extension.openrouter
+popclip version: 4225
+icon: openrouter_icon.svg
+description:
+  en: Send selected text to OpenRouter AI and handle the response.
+  zh-Hans: 发送选中的文本到 OpenRouter AI 并处理响应。
+  ja: 選択したテキストを OpenRouter AI に送信し、応答を処理します。
+
+entitlements: [network]
+
+options:
+  - identifier: apikey
+    label:
+      en: API Key
+      zh-Hans: API 密钥
+      ja: APIキー
+    type: secret
+    description:
+      en: Your OpenRouter API Key (sk-or-...)
+      zh-Hans: 你的 OpenRouter API 密钥 (sk-or-...)
+      ja: OpenRouter の APIキー (sk-or-...)
+  - identifier: model
+    label:
+      en: Model
+      zh-Hans: 模型
+      ja: モデル
+    type: string
+    defaultValue: google/gemini-3-flash-preview
+    description:
+      en: Model (e.g., google/gemini-3-flash-preview)
+      zh-Hans: 模型 (例如 google/gemini-3-flash-preview)
+      ja: "モデル（例: google/gemini-3-flash-preview）"
+  - identifier: systemPrompt
+    label:
+      en: System Prompt
+      zh-Hans: 系统提示词
+      ja: システムプロンプト
+    type: string
+    description:
+      en: Optional system prompt (e.g., Translate to French)
+      zh-Hans: 可选的系统提示词 (例如 翻译成中文)
+      ja: "任意のシステムプロンプト（例: フランス語に翻訳）"
+  - identifier: userPrompt
+    label:
+      en: User Prompt
+      zh-Hans: 用户提示词
+      ja: ユーザープロンプト
+    type: string
+    defaultValue: ""
+    description:
+      en: Use {{text}} to represent the selected text.
+      zh-Hans: 可使用 {{text}} 代表选中文本。
+      ja: 選択テキストを表すには {{text}} を使用します。
+  - identifier: temperature
+    label:
+      en: Temperature
+      zh-Hans: 温度
+      ja: 温度
+    type: string
+    defaultValue: "1.0"
+    description:
+      en: Temperature (0.0 to 2.0).
+      zh-Hans: 温度 (0.0 到 2.0)。
+      ja: 温度（0.0 から 2.0）。
+  - identifier: maxTokens
+    label:
+      en: Max Tokens
+      zh-Hans: 最大 token
+      ja: 最大トークン
+    type: string
+    defaultValue: "1024"
+    description:
+      en: Maximum number of tokens to generate.
+      zh-Hans: 生成的最大 token 数。
+      ja: 生成する最大トークン数。
+  - identifier: responseHandling
+    label:
+      en: Response Handling
+      zh-Hans: 响应处理
+      ja: 応答の処理
+    type: multiple
+    values:
+      - append
+      - replace
+      - copy
+      - show
+    valueLabels:
+      - en: Append
+        zh-Hans: 在下方追加
+        ja: 下に追加
+      - en: Replace
+        zh-Hans: 替换原文
+        ja: 選択範囲を置換
+      - en: Copy
+        zh-Hans: 复制到剪贴板
+        ja: クリップボードにコピー
+      - en: Preview
+        zh-Hans: 浮窗预览
+        ja: プレビュー
+    defaultValue: append
+    description:
+      en: Append, replace, copy, or preview.
+      zh-Hans: 追加、替换、复制或预览。
+      ja: 追加、置換、コピー、またはプレビュー。
+
+action:
+  javascript file: action.ts
