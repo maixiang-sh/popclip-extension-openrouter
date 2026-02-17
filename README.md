@@ -4,7 +4,9 @@ A PopClip extension that sends selected text to OpenRouter and returns the model
 
 ## Screenshot
 
-![OpenRouter PopClip Extension Screenshot](Screenshot.png)
+<p>
+  <img src="Screenshot.png" width="400" alt="OpenRouter PopClip Extension Screenshot">
+</p>
 
 ## Features
 
