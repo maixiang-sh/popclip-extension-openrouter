@@ -2,6 +2,10 @@
 
 A PopClip extension that sends selected text to OpenRouter and returns the model output.
 
+## Screenshot
+
+![OpenRouter PopClip Extension Screenshot](Screenshot.png)
+
 ## Features
 
 - OpenRouter Chat Completions API integration
@@ -83,3 +87,7 @@ npm run release-check
   - model name is valid on OpenRouter
   - network access is available
   - timeout is sufficient for selected model
+
+## License
+
+MIT. See `LICENSE`.

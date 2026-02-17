@@ -29,11 +29,11 @@ options:
       zh-Hans: 模型
       ja: モデル
     type: string
-    defaultValue: google/gemini-3-flash-preview
+    defaultValue: google/gemini-2.5-flash-lite
     description:
-      en: Model (e.g., google/gemini-3-flash-preview)
-      zh-Hans: 模型 (例如 google/gemini-3-flash-preview)
-      ja: "モデル（例: google/gemini-3-flash-preview）"
+      en: Model (e.g., google/gemini-2.5-flash-lite)
+      zh-Hans: 模型 (例如 google/gemini-2.5-flash-lite)
+      ja: "モデル（例: google/gemini-2.5-flash-lite）"
   - identifier: systemPrompt
     label:
       en: System Prompt
